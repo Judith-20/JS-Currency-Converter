@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 90%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  padding: 1.5rem;
+}
+
+.btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(240, 87%, 69%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn:active::before {
+  background-color: hsl(240, 87%, 79%);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: hsl(240, 87%, 59%);
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.3s;
+  color: white;
+  z-index: -1;
+}
+.btn:hover::before {
+  width: 100%;
+}
+
+.card {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+.cardDiv {
+  max-width: 600px;
+  background-color: white;
+  /* margin: 30% auto; */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+.closeModal {
+  float: right;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.cardDiv h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: hsl(240, 79%, 55%);
+}
+
+.select {
+  margin-bottom: 1rem;
+}
+.dropDown{
+  cursor: pointer;
+}
+
+.currency {
+  margin-bottom: 1rem;
+}
+
+label:not(.select) {
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+input[type="number"] {
+  margin-left: 0.2rem;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+}
